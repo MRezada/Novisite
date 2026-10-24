@@ -1,5 +1,4 @@
 export const dynamic = 'force-static';
-export const dynamic = 'force-dynamic';
 import { absUrl } from "@/lib/seo";
 import { getPublished, getSettings } from "@/lib/db";
 
