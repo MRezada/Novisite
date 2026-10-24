@@ -1,3 +1,4 @@
+export const dynamic = 'force-static';
 import type { MetadataRoute } from "next";
 import { getSettings } from "@/lib/db";
 import { absUrl } from "@/lib/seo";
