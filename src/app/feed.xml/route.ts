@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { absUrl } from "@/lib/seo";
 import { getPublished, getSettings } from "@/lib/db";
 
@@ -10,3 +11,4 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>${esc(s.nameFa)}</title><link>${absUrl(s, "/")}</link><description>${esc(s.description)}</description><language>fa</language>${items}</channel></rss>`;
   return new Response(xml, { headers: { "Content-Type": "application/xml; charset=utf-8" } });
 }
+

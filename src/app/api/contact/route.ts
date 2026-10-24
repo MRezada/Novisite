@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 import { clientIp, rateLimit, sameOrigin } from "@/lib/auth";
 import { addMessage } from "@/lib/db";
@@ -24,3 +25,4 @@ export async function POST(req: Request) {
   await addMessage({ name, email, phone: s(body.phone, 40), company: s(body.company, 120), subject: s(body.subject, 80), budget: s(body.budget, 80), timeline: s(body.timeline, 80), message });
   return NextResponse.json({ ok: true });
 }
+

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { promises as fs } from "fs";
 import path from "path";
 import { randomUUID } from "crypto";
@@ -51,3 +52,4 @@ export async function DELETE(req: Request) {
   await fs.unlink(path.join(UPLOAD_DIR, name)).catch(() => undefined);
   return NextResponse.json({ ok: true });
 }
+

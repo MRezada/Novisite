@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 import { getSettings, saveSettings } from "@/lib/db";
 import { guard, refreshSite } from "../guard";
@@ -17,3 +18,4 @@ export async function PUT(req: Request) {
   refreshSite();
   return NextResponse.json({ ok: true, settings });
 }
+

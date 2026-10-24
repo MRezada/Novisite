@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { adminEnabled, checkPassword, clientIp, COOKIE, cookieOptions, createToken, rateLimit, sameOrigin } from "@/lib/auth";
@@ -19,3 +20,4 @@ export async function DELETE() {
   (await cookies()).set(COOKIE, "", { ...cookieOptions, maxAge: 0 });
   return NextResponse.json({ ok: true });
 }
+
