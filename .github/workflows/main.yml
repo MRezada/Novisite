@@ -33,7 +33,9 @@ jobs:
         run: npm install
 
       - name: Build with Next.js
-        run: npx next build
+        run: |
+          rm -rf src/app/api
+          npx next build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -50,3 +52,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
