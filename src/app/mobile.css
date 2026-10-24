@@ -1,0 +1,95 @@
+/* Shared small-screen layout corrections; desktop presentation stays intact. */
+@media (max-width: 1020px) {
+  .drawer { height: 100dvh; overflow-y: auto; overscroll-behavior: contain; padding-top: 96px; padding-bottom: calc(28px + env(safe-area-inset-bottom)); }
+  .drawer a.dl { font-size: clamp(20px, 4vw, 28px); min-height: 48px; }
+  .drawer a[aria-current="page"] { color: var(--blue); }
+  .drawer .btn { flex-shrink: 0; min-height: 48px; }
+  .header:has(.menu-btn[aria-expanded="true"]) { background: var(--paper); }
+  .one-hero-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .one-intro { max-width: 650px; }
+  .one-hero-layout > :last-child { max-width: 510px; margin-inline: auto; }
+}
+@media (max-width: 760px) {
+  .header-in { gap: 12px; }
+  .header .brand { min-width: 0; font-size: 20px; }
+  .header .brand span { overflow-wrap: anywhere; }
+  .menu-btn { flex: none; }
+  .wrap { width: calc(100% - 32px); }
+  .one-hero { padding-top: 20px; }
+  .one-hero-top { flex-wrap: wrap; gap: 9px; }
+  .one-hero-layout { padding: 32px 0; min-height: 0; }
+  .one-announcement { display: inline-block; font-size: 11px; line-height: 1.9; }
+  .one-intro h1 { font-size: clamp(32px, 9.5vw, 47px); letter-spacing: -1px; line-height: 1.6; margin: 20px 0; }
+  .one-intro p { font-size: 14px; }
+  .one-actions { gap: 10px; margin-top: 24px; }
+  .one-actions .one-button { flex: 1 1 180px; min-height: 48px; }
+  .one-promises { flex-wrap: wrap; gap: 9px 16px; font-size: 11px; }
+  .one-hero-bottom { gap: 15px; flex-wrap: wrap; font-size: 11px; }
+  .one-hero-bottom a { display: inline-flex; align-items: center; min-height: 44px; }
+  .one-section { padding-block: 56px; }
+  .one-site h2 { font-size: clamp(25px, 7vw, 34px); letter-spacing: -.8px; }
+  .one-heading > p { font-size: 14px; }
+  .one-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .one-tabs button { min-width: 0; min-height: 58px; padding: 12px 10px; font-size: 12px; gap: 8px; }
+  .one-tabs button > span:last-child { display: none; }
+  .one-module-panel { padding: 20px 16px; gap: 24px; }
+  .one-module-panel > *, .one-story > *, .detail > *, .contact-grid > *, .form .two > * { min-width: 0; }
+  .one-module-copy h3 { font-size: 22px; }
+  .one-link { min-height: 44px; font-size: 13px; }
+  .one-foundation { grid-template-columns: 1fr; }
+  .one-core-strip { padding: 16px; }
+  .one-demo-band { padding-block: 32px; }
+  .one-demo-band .one-button { width: 100%; min-height: 48px; }
+  .one-faq summary { min-height: 48px; font-size: 14px; }
+  .one-faq details p { padding-left: 0; }
+  .one-price-note { font-size: 11px; gap: 8px; }
+  .one-final { padding: 55px 0; }
+  .one-final .one-button { min-height: 48px; }
+  .page-hero { padding-block: 36px 30px; }
+  .page-hero h1 { font-size: clamp(29px, 8vw, 42px); line-height: 1.6; overflow-wrap: anywhere; }
+  .page-hero .lead { font-size: 15px; }
+  .lead-strong { font-size: 18px; }
+  .crumbs { flex-wrap: wrap; gap: 5px 9px; font-size: 12px; overflow-wrap: anywhere; }
+  .crumbs a { min-height: 36px; display: inline-flex; align-items: center; }
+  .crumbs > span { align-self: center; }
+  .product-hero-actions > .btn { width: 100%; min-height: 48px; }
+  .prow-vis.big { padding: 12px; border-radius: 18px; }
+  .product-platform-card { grid-template-columns: 40px minmax(0, 1fr); gap: 12px; padding: 18px; }
+  .product-platform-icon { width: 40px; height: 40px; border-radius: 12px; }
+  .product-platform-icon svg { width: 23px; }
+  .product-platform-card h2 { font-size: 18px; }
+  .product-platform-card > .btn { min-height: 44px; }
+  .product-detail-sec { padding-top: 40px; }
+  .related-head { flex-wrap: wrap; gap: 16px; }
+  .module-mock { grid-template-columns: minmax(0, 1fr); }
+  .module-side { display: none; }
+  .module-main { padding: 12px; }
+  .module-kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .module-panels { grid-template-columns: minmax(0, 1fr); }
+  .module-top strong { overflow-wrap: anywhere; }
+  .sec-head { gap: 18px; margin-bottom: 28px; }
+  .sec-head h2 { font-size: clamp(27px, 7.5vw, 38px); line-height: 1.6; }
+  .sec-head p { font-size: 14px; }
+  .cta { padding: 28px 22px; border-radius: 22px; }
+  .cta h2 { font-size: clamp(26px, 7vw, 36px); line-height: 1.6; }
+  .cta p { font-size: 15px; }
+  .cta-actions { gap: 14px; margin-top: 24px; }
+  .cta-actions .btn { width: 100%; min-height: 48px; }
+  .cta .mail { overflow-wrap: anywhere; font-size: 14px; }
+  .form input, .form select, .form textarea { min-width: 0; font-size: 16px; }
+  .form .btn { min-height: 48px; }
+  .footer { padding: 48px 0 calc(80px + env(safe-area-inset-bottom)); }
+  .footer-grid { gap: 28px; }
+  .footer li a { display: inline-flex; align-items: center; min-height: 44px; }
+  .footer-bottom { margin-top: 28px; font-size: 12px; }
+  .fab { bottom: calc(12px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 380px) {
+  .one-kicker { font-size: 9px; letter-spacing: .5px; }
+  .one-edition { font-size: 9px; }
+  .one-tabs button { font-size: 11px; gap: 6px; }
+}
+@media (max-height: 500px) and (max-width: 1020px) {
+  .drawer { padding-top: 80px; gap: 0; }
+  .drawer a.dl { padding-block: 6px; font-size: 20px; }
+}

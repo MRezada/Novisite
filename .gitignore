@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+.env*
+!.env.example
+.DS_Store
+
+# داده‌های سایت و تصاویر آپلودشده
+/data
+.env
+
+# Generated preview/build tooling and local agent state
+/.pages-build/
+/.mobile-browser/
+/.gapcode/
+/.agents/
+/.aws/
+*.tsbuildinfo
+*.log
