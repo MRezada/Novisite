@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 import { NextResponse } from "next/server";
 import { collections } from "@/admin/schema";
 import { listAll, removeItem, reorderItems, setMessageRead, upsertItem } from "@/lib/db";

@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { adminEnabled, checkPassword, clientIp, COOKIE, cookieOptions, createToken, rateLimit, sameOrigin } from "@/lib/auth";

@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 import { NextResponse } from "next/server";
 import { clientIp, rateLimit, sameOrigin } from "@/lib/auth";
 import { addMessage } from "@/lib/db";

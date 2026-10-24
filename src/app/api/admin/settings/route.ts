@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-static';
 import { NextResponse } from "next/server";
 import { getSettings, saveSettings } from "@/lib/db";
 import { guard, refreshSite } from "../guard";
